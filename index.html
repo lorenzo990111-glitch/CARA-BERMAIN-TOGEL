@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classic Number Guide</title>
+  <title>Pusat Informasi Permainan</title>
 
   <style>
     * {
@@ -14,167 +14,150 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top, #173d2b 0%, #092016 45%, #050d09 100%);
-      color: #e8f3eb;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #e8ffe8;
       min-height: 100vh;
     }
 
     header {
-      background: #06130c;
-      border-bottom: 1px solid #315f43;
-      padding: 20px;
+      background: linear-gradient(135deg, #071a0d, #0d3218);
+      border-bottom: 1px solid #174d25;
+      padding: 25px 15px;
       text-align: center;
     }
 
     header h1 {
-      color: #b8e6c5;
-      font-size: 28px;
-      letter-spacing: 2px;
+      color: #42ff70;
+      font-size: 30px;
+      margin-bottom: 8px;
+      text-shadow: 0 0 12px rgba(66,255,112,.35);
     }
 
     header p {
-      color: #8faf98;
-      margin-top: 7px;
+      color: #a9c9ae;
       font-size: 14px;
     }
 
     .container {
       width: 92%;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 30px auto;
-    }
-
-    .hero {
-      background: linear-gradient(145deg, #123622, #07150d);
-      border: 1px solid #396b4b;
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 10px 35px rgba(0,0,0,.4);
-    }
-
-    .hero h2 {
-      color: #c8efd1;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      color: #9fb9a7;
-      line-height: 1.7;
     }
 
     .menu {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 22px;
+      gap: 15px;
+      margin-bottom: 25px;
     }
 
-    .menu button,
-    .register {
-      border: 1px solid #4a805b;
-      background: #102c1b;
-      color: #d8f0dd;
-      padding: 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 15px;
-      transition: .2s;
-    }
-
-    .menu button:hover,
-    .register:hover {
-      background: #1a4a2b;
-      transform: translateY(-2px);
-    }
-
-    .section {
-      display: none;
-      margin-top: 22px;
-      background: #091a10;
-      border: 1px solid #315f43;
+    .menu a {
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 10px;
       border-radius: 10px;
-      padding: 25px;
+      background: #0b2111;
+      border: 1px solid #1b5c2b;
+      color: #65ff86;
+      font-weight: bold;
+      transition: .25s;
+      cursor: pointer;
     }
 
-    .section.active {
-      display: block;
+    .menu a:hover {
+      background: #123d1d;
+      border-color: #42ff70;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(66,255,112,.18);
     }
 
-    .section h3 {
-      color: #b9e7c5;
+    .card {
+      background: #09140c;
+      border: 1px solid #174d25;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.35);
+    }
+
+    .card h2 {
+      color: #48ff72;
       margin-bottom: 15px;
+      font-size: 21px;
     }
 
-    .section p,
-    .section li {
-      color: #a9bdaf;
+    .card p,
+    .card li {
+      color: #c0d5c3;
       line-height: 1.7;
+      font-size: 15px;
     }
 
-    .section ul {
+    .card ul {
       padding-left: 20px;
     }
 
-    .number-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .number {
-      background: #102c1b;
-      border: 1px solid #3d704d;
-      padding: 18px 5px;
-      text-align: center;
-      border-radius: 7px;
-      font-size: 22px;
-      color: #d5f0da;
-    }
-
-    .generate {
-      margin-top: 18px;
-      background: #285b38;
-      border: 1px solid #70a67d;
-      color: white;
-      padding: 13px 25px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-family: inherit;
-    }
-
-    .notice {
-      margin-top: 18px;
+    .step {
+      background: #0d2112;
+      border-left: 4px solid #35c95a;
       padding: 14px;
-      border-left: 3px solid #71947a;
-      background: #0d2416;
-      color: #9fb5a5;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+
+    .step strong {
+      color: #61ff82;
+    }
+
+    .daftar {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: #116b2b;
+      color: white;
+      padding: 16px;
+      border-radius: 9px;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: .25s;
+    }
+
+    .daftar:hover {
+      background: #178c39;
+      box-shadow: 0 0 18px rgba(23,140,57,.35);
+    }
+
+    .warning {
       font-size: 13px;
-      line-height: 1.6;
+      color: #91aa96;
+      background: #081009;
+      border: 1px solid #18351f;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 15px;
-      color: #718878;
-      font-size: 12px;
+      padding: 25px 15px;
+      color: #68806d;
+      font-size: 13px;
+      border-top: 1px solid #12361b;
+      margin-top: 30px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
       .menu {
         grid-template-columns: 1fr;
       }
 
-      .number-grid {
-        grid-template-columns: repeat(5, 1fr);
+      header h1 {
+        font-size: 24px;
       }
 
-      .hero {
-        padding: 22px 15px;
+      .container {
+        width: 94%;
       }
     }
   </style>
@@ -182,132 +165,106 @@
 
 <body>
 
-<header>
-  <h1>CLASSIC NUMBER GUIDE</h1>
-  <p>Informasi & simulasi angka secara sederhana</p>
-</header>
+  <header>
+    <h1>PUSAT INFORMASI PERMAINAN</h1>
+    <p>Panduan umum dan informasi permainan</p>
+  </header>
 
-<div class="container">
+  <main class="container">
 
-  <div class="hero">
-    <h2>Bagan Angka Acak</h2>
-    <p>
-      Gunakan halaman ini sebagai simulasi edukasi.
-      Angka yang ditampilkan dibuat secara acak dan bukan prediksi hasil undian.
-    </p>
-
+    <!-- MENU -->
     <div class="menu">
-      <button onclick="showSection('bagan')">
-        BAGAN ANGKA
-      </button>
+      <a href="#cara-bermain">CARA BERMAIN</a>
 
-      <button onclick="showSection('cara')">
-        CARA BERMAIN
-      </button>
+      <a href="https://wadahbesar.com/" target="_blank" rel="noopener noreferrer">
+        DAFTAR
+      </a>
 
-      <button onclick="showSection('info')">
-        INFORMASI
-      </button>
+      <a href="#informasi">INFORMASI PERMAINAN</a>
     </div>
-  </div>
 
-  <!-- BAGAN -->
-  <div id="bagan" class="section active">
-    <h3>Bagan Angka Acak</h3>
+    <!-- CARA BERMAIN -->
+    <section class="card" id="cara-bermain">
+      <h2>📖 Cara Bermain</h2>
 
-    <p>
-      Tekan tombol di bawah untuk membuat kombinasi angka acak.
-      Hasil setiap simulasi tidak mempunyai kemampuan memprediksi hasil undian
-      berikutnya.
-    </p>
+      <p>
+        Bagian ini berisi informasi umum mengenai cara membaca pilihan
+        permainan dan memahami aturan yang berlaku.
+      </p>
 
-    <div id="numbers" class="number-grid"></div>
+      <div class="step">
+        <strong>01. Pilih jenis permainan</strong>
+        <p>
+          Pilih jenis permainan yang tersedia sesuai dengan informasi
+          dan aturan yang berlaku.
+        </p>
+      </div>
 
-    <button class="generate" onclick="generateNumbers()">
-      GENERATE ANGKA
-    </button>
+      <div class="step">
+        <strong>02. Pelajari aturan</strong>
+        <p>
+          Pastikan memahami ketentuan, jadwal, dan mekanisme permainan
+          sebelum mengambil keputusan.
+        </p>
+      </div>
 
-    <div class="notice">
-      Catatan: setiap hasil dibuat menggunakan generator angka acak di browser.
-      Tidak ada angka "pasti menang" atau rumus yang dapat menjamin hasil.
-    </div>
-  </div>
+      <div class="step">
+        <strong>03. Periksa informasi</strong>
+        <p>
+          Periksa kembali data dan informasi permainan sebelum melanjutkan.
+        </p>
+      </div>
 
-  <!-- CARA BERMAIN -->
-  <div id="cara" class="section">
-    <h3>Cara Bermain / Memahami Undian</h3>
+      <div class="step">
+        <strong>04. Bermain secara bertanggung jawab</strong>
+        <p>
+          Pahami risiko dan jangan menggunakan dana yang tidak mampu
+          Anda tanggung kehilangannya.
+        </p>
+      </div>
+    </section>
 
-    <ul>
-      <li>Pahami terlebih dahulu aturan undian yang resmi.</li>
-      <li>Hasil undian berbasis peluang dan proses pengundian acak.</li>
-      <li>Angka sebelumnya tidak menentukan angka berikutnya.</li>
-      <li>Hindari anggapan bahwa angka "panas" atau "dingin" menjamin kemenangan.</li>
-      <li>Jika mengikuti permainan berbayar yang legal di wilayah Anda, gunakan batas dana yang mampu Anda tanggung.</li>
-    </ul>
+    <!-- INFORMASI PERMAINAN -->
+    <section class="card" id="informasi">
+      <h2>ℹ️ Informasi Permainan</h2>
 
-    <div class="notice">
-      Simulasi pada halaman ini hanya untuk pembelajaran mengenai angka acak
-      dan tidak merupakan rekomendasi taruhan.
-    </div>
-  </div>
+      <ul>
+        <li>Pastikan membaca aturan permainan terlebih dahulu.</li>
+        <li>Perhatikan jadwal dan informasi resmi permainan.</li>
+        <li>Jangan memberikan informasi akun kepada pihak lain.</li>
+        <li>Gunakan layanan secara bertanggung jawab.</li>
+        <li>Perhatikan batas usia dan ketentuan hukum yang berlaku di wilayah Anda.</li>
+      </ul>
 
-  <!-- INFORMASI -->
-  <div id="info" class="section">
-    <h3>Informasi Penting</h3>
+      <div class="warning">
+        Informasi pada halaman ini bersifat umum. Permainan yang melibatkan
+        uang memiliki risiko kerugian. Pastikan aktivitas yang Anda lakukan
+        sesuai dengan hukum dan peraturan setempat.
+      </div>
+    </section>
 
-    <p>
-      Dalam undian yang benar-benar acak, tidak ada strategi yang dapat
-      menjamin kombinasi pemenang. Setiap hasil undian merupakan peristiwa
-      tersendiri.
-    </p>
+    <!-- DAFTAR -->
+    <section class="card">
+      <h2>🔗 Daftar</h2>
+      <p>
+        Gunakan tombol berikut untuk menuju halaman yang Anda tentukan.
+      </p>
 
-    <br>
+      <a
+        class="daftar"
+        href="https://wadahbesar.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DAFTAR SEKARANG
+      </a>
+    </section>
 
-    <p>
-      Gunakan halaman ini sebagai contoh desain website, pembelajaran HTML,
-      CSS, JavaScript, dan visualisasi angka.
-    </p>
-  </div>
+  </main>
 
-</div>
-
-<footer>
-  © 2026 Classic Number Guide — Educational Demo
-</footer>
-
-<script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
-
-    document.getElementById(id).classList.add('active');
-
-    window.scrollTo({
-      top: document.getElementById(id).offsetTop - 20,
-      behavior: 'smooth'
-    });
-  }
-
-  function generateNumbers() {
-    const container = document.getElementById('numbers');
-    container.innerHTML = '';
-
-    for (let i = 0; i < 10; i++) {
-      const number = Math.floor(Math.random() * 100)
-        .toString()
-        .padStart(2, '0');
-
-      const box = document.createElement('div');
-      box.className = 'number';
-      box.textContent = number;
-
-      container.appendChild(box);
-    }
-  }
-
-  generateNumbers();
-</script>
+  <footer>
+    © 2026 Pusat Informasi Permainan
+  </footer>
 
 </body>
 </html>
